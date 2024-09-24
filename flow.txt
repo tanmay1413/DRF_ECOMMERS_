@@ -1,0 +1,43 @@
+ecommerce/
+│
+├── ecommerce/                                      # Main project folder
+│   ├── settings.py                                 # Django settings
+│   ├── urls.py                                     # Global URL routing
+│   └── wsgi.py                                     # WSGI config for deployment
+│                       
+├── products/                                       # Products app
+│   ├── models.py                                   # Product models
+|   |       |-- Product
+|   |               |-- name
+|   |               |-- decription
+|   |               |-- price 
+|   |               |-- stock 
+|   |               |-- category 
+|   |               |-- created_date
+|   |               |-- update_date
+|   |       
+│   ├── serializers.py
+|   |               |-- modelSerializer             # Product serializers
+│   ├── views.py
+|   |        |-- create  
+|   |        |-- read  
+|   |        |-- update
+|   |        |-- delete                             # Product views (DRF)
+│   ├── urls.py                                     # Product-specific routes
+│   └── tests.py                                    # Tests for product features
+│                       
+├── users/                                          # Users and authentication app
+│   ├── models.py                                   # Custom user model (if necessary)
+│   ├── serializers.py                              # User serializers
+│   ├── views.py                                    # User views (registration, login)
+│   ├── urls.py                                     # User-specific routes
+│   └── permissions.py                              # User permissions
+│                       
+├── orders/                                         # Orders and cart app
+│   ├── models.py                                   # Order, cart models
+│   ├── serializers.py                              # Order and cart serializers
+│   ├── views.py                                    # Order views (create, update, delete)
+│   ├── urls.py                                     # Order routes
+│   └── payment.py                                  # Payment logic
+│
+└── manage.py
