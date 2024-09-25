@@ -16,6 +16,7 @@ class products(models.Model):
     category = models.CharField(max_length=20 , choices=PRODUCT_TYPE_CHOICES)
     created_date = models.DateField(auto_now_add=True)
     updated_date = models.DateField(auto_now=True)
+    image = models.ImageField(upload_to='product_images/') 
     
     def __str__(self):
         return self.name
